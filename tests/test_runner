@@ -1,0 +1,22 @@
+int main() {
+    // Unit and Integration test runner
+    printf("Running unit and integration tests...
+");
+    // Example: Run unit tests
+    int unitTestResult = system("make test_unit");
+    if (unitTestResult != 0) {
+        printf("Unit tests failed!
+");
+        return 1;
+    }
+    // Example: Run integration tests
+    int integrationTestResult = system("make test_integration");
+    if (integrationTestResult != 0) {
+        printf("Integration tests failed!
+");
+        return 1;
+    }
+    printf("All tests passed successfully!
+");
+    return 0;
+}
